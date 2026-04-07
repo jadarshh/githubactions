@@ -1,0 +1,23 @@
+name: Hello World Pipeline
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+jobs:
+    say-hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Say Hello
+              run: echo "Hello, World!"
+            
+            - name: Say Goodbye
+              run: echo "Goodbye, World!"
+            
+            - name: Say Welcome
+              run: echo "Welcome to GitHub Actions!"
+            
+            - name: show ubuntu version
+              run: cat /etc/os-release
+            - name: show all files in the current directory
+              run: ls -la 
